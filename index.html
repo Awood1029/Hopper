@@ -8,9 +8,146 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         
-        <title>trillo &mdash; Your all-in-one booking app</title>
+        <title>Hopper &mdash; Flight Booking</title>
     </head>
     <body>
         
+        <header class="header">
+            <a href="#" class="logo">Hopper</a>
+            <nav class="main-nav">
+                <ul>
+                    <li class="main-nav__item"><a href="#" class="main-nav__link">Find ticket</a></li>
+                    <li class="main-nav__item"><a href="#" class="main-nav__link">Why us</a></li>
+                    <li class="main-nav__item"><a href="#" class="main-nav__link">Testimonial</a></li>
+                </ul>
+                <a href="#" class="main-nav__login">Login</a>
+            </nav>
+        </header>
+
+        <section class="section-search">
+            <div class="search-box">
+                <h1 class="search-box__heading">
+                    Find your <span class="search-box__heading--green">flight</span> and start<br>the holiday
+                </h1>
+                <div class="search-box__search">
+                    <div class="search-box__search--to">
+                        Where to
+
+                        <input type="text" name="Fly to" class="search-box__search--to-location" placeholder="Flying to">
+                    </div>
+                    <div class="search-box__search--from">
+                        From
+
+                        <input type="text" name="Fly from" class="search-box__search--from-location" placeholder="Flying from">
+                    </div>
+                    <div class="search-box__search--when">
+                        When
+
+                        <input type="date" name="Fly from" class="search-box__search--when-date" placeholder="Departure date">
+                    </div>
+                    <!-- <div class="search-box__search--options">
+                        <select name="search-box__search--options-route">
+                            <option value="one-way">One Way Trip</option>
+                            <option value="round-trip">Round Trip</option>
+                        </select>
+                        <select name="search-box__search--options-passengers">
+                            <option value="1">1 passenger</option>
+                            <option value="2">2 passenger</option>
+                            <option value="3">3 passenger</option>
+                            <option value="4">4 passenger</option>
+                            <option value="5">5 passenger</option>
+                            <option value="6">6 passenger</option>
+                        </select>
+                    </div> -->
+                </div>
+            </div>
+            <div class="search-image">
+                <div class="search-image__button-box">
+                    <a href="#" class="search-image__button-box--button">
+                        <svg class="search-image__button-box--icon">
+                            <use xlink:href="img/sprite.svg#icon-magnifying-glass">
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-info">
+            <div class="top-destination">
+                <h2 class="top-destination__heading">Top Destination</h2>
+                <div class="top-destination__card">
+                    <div class="top-destination__card--picture">
+                        &nbsp;
+                        <div href="#" class="top-destination__card--picture--button">--></div>
+                    </div>
+
+                    <h4 class="top-destination__card--heading">
+                        Bali, Indonesia
+                    </h4>
+
+                    <div class="top-destination__card--details">
+                        <p>50+ activites to choose from</p>
+                    </div>
+                </div>
+            </div>
+            <div class="qoute">
+                <div class="qoute__content">
+                    <div class="qoute__content--text">
+                        "Hopper has taken me to the most beautiful places"
+                    </div>
+                    <div class="qoute__content--author">
+                        <div class="qoute__content--author--picture">
+                            
+                        </div>
+                        <div class="qoute__content--author--text">
+                            <h3>Arthur Wood</h3>
+                            <p>Professional Photographer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-benefits">
+            <div class="benefits__heading">
+                <h3>You benefit by using our services</h3>
+            </div>
+            <div class="benefits__content">
+                <div class="benefits__content--card">
+                    <svg class="benefits__content--card-icon">
+                        <use xlink:href="img/SVG/#icon-clock">
+                    </svg>
+                    <div class="benefits__content--card-header">
+                        <h4>Easy to Reschedule</h4>
+                    </div>
+                    <div class="benefits__content--card-text">
+                        <p>We will help you to reschedule your ticket</p>
+                    </div>
+                </div>
+                <div class="benefits__content--card">
+                    <svg class="benefits__content--card-icon">
+                        <use xlink:href="img/sprite.svg#icon-credit-card">
+                    </svg>
+                    <div class="benefits__content--card-header">
+                        <h4>Easy to Pay</h4>
+                    </div>
+                    <div class="benefits__content--card-text">
+                        <p>We provides many payment options</p>
+                    </div>
+                </div>
+                <div class="benefits__content--card">
+                    <svg class="benefits__content--card-icon">
+                        <use xlink:href="img/sprite.svg#icon-mobile">
+                    </svg>
+                    <div class="benefits__content--card-header">
+                        <h4>Paperless</h4>
+                    </div>
+                    <div class="benefits__content--card-text">
+                        <p>Tickets delivered right to your phone for scanning</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </body>
 </html>

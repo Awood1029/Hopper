@@ -1,0 +1,25 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	margin: 1.5rem 8rem 0 8rem;
+}
+
+.section-search {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1.5rem 0 0 8rem;
+	height: 85vh;
+}
+
+.section-info {
+	display: flex;
+	margin: 0 0 0 8rem;
+	height: 60vh;
+}
+
+.section-benefits {
+	display: flex;
+	flex-direction: column;
+	height: 70vh;
+}
