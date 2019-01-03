@@ -27,6 +27,7 @@
 		padding-bottom: .5rem;
 		margin: 1rem 2rem 0 2rem;
 		transition: border-bottom .15s;
+		border: 2px solid transparent;
 
 		&:hover, &:active {
 			border-bottom: 2px solid var(--green-light);
@@ -286,20 +287,33 @@
 	height: 80%;
 
 	&--card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
 		background-color: #fff;
 		height: 25rem;
 		width: 25rem;
 
-		&-icon {
-			fill: #000;
-			height: 3rem;
-			width: 3rem;
+		&-iconbox {
+			position: relative;
+			width: 50%;
+			margin: 2rem auto;
+
+			&-icon {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				fill: #000;
+				height: 3rem;
+				width: 3rem;
+			}
 		}
 
 		&-header {
 			font-size: 2rem;
 			color: var(--green-light);
-			margin: 0 0 1.5rem 1.5rem;
+			margin: 0 0 0 1.5rem;
 
 		}
 
@@ -307,6 +321,7 @@
 			font-size: 1.6rem;
 			color: var(--main-text-color);
 			margin-left: 1.5rem;
+			margin-bottom: 2rem;
 		}
 	}
 }
