@@ -1,6 +1,7 @@
 .header {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	margin: 1.5rem 8rem 0 8rem;
 }
 
@@ -14,12 +15,17 @@
 
 .section-info {
 	display: flex;
-	margin: 0 0 0 8rem;
-	height: 60vh;
+	align-items: center;
+	margin: 3rem 0 1rem 8rem;
 }
 
 .section-benefits {
 	display: flex;
 	flex-direction: column;
-	height: 70vh;
+}
+
+.footer {
+	height: 40rem;
+	background-color: var(--footer);
+	margin-top: 25rem;
 }
