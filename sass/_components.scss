@@ -68,7 +68,8 @@
 	&__search {
 		position: absolute;
 		display: flex;
-		justify-content: space-around;
+		flex-direction: column;
+		justify-content: flex-start;
 		top: 45%;
 		right: 0;
 		height: 50%;
@@ -77,11 +78,17 @@
 		border-radius: 1rem 0 0 1rem;
 		box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.2);
 
+		.to-from-when {
+			display: flex;
+			justify-content: space-around;
+			margin-top: 2rem;
+		}
+
 		&--to {
 			display: flex;
 			flex-direction: column;
-			padding-top: 1.5rem;
 			font-size: 1.3rem;
+			margin-bottom: 2rem;
 
 			&-location {
 				font-family: inherit;
@@ -89,17 +96,17 @@
 				color: inherit;
 				background-color: var(--grey-light-2);
 				border: none;
-				margin-top: 1.5rem;
 				height: 3rem;
 				padding-left: 1rem;
+				margin-top: .6rem;
 			}
 		}
 
 		&--from {
 			display: flex;
 			flex-direction: column;
-			padding-top: 1.5rem;
 			font-size: 1.3rem;
+			margin-bottom: 2rem;
 
 			&-location {
 				font-family: inherit;
@@ -107,17 +114,17 @@
 				color: inherit;
 				background-color: var(--grey-light-2);
 				border: none;
-				margin-top: 1.5rem;
 				height: 3rem;
 				padding-left: 1rem;
+				margin-top: .6rem;
 			}
 		}
 
 		&--when {
 			display: flex;
 			flex-direction: column;
-			padding-top: 1.5rem;
 			font-size: 1.3rem;
+			margin-bottom: 2rem;
 
 			&-date {
 				font-family: inherit;
@@ -125,23 +132,27 @@
 				color: inherit;
 				background-color: var(--grey-light-2);
 				border: none;
-				margin-top: 1.5rem;
 				height: 3rem;
 				padding-left: 1rem;
+				margin-top: .6rem;
 			}
 		}
 
 		&--options {
+			display: flex;
+			justify-content: flex-start;
+			margin-left: 2.6rem;
+			height: 2rem;
 
 			&-route {
-
+				margin-right: 2rem; 
+				border: none;	
 			}
 
 			&-passengers {
-
+				border: none;					
 			}
 		}
-
 	}
 }
 
@@ -175,7 +186,9 @@
 .top-destination {
 	height: 100%;
 	width: 55%;
-	transform: translateY(-20%);
+	transform: translateY(-10rem);
+	display: flex;
+	flex-direction: column;
 
 	&__heading {
 		font-size: 2.5rem;
@@ -186,9 +199,10 @@
 	}
 
 	&__card {
+		position: relative;
 		background-color: #fff;
-		height: 65%;
-		width: 75%;
+		height: 37rem;
+		width: 45rem;
 		box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.2);
 		border-radius: 1rem;
 		overflow: hidden;
@@ -259,7 +273,7 @@
 		width: 75%;
 
 		&--text {
-			// text-align: center;
+			margin-bottom: 1.2rem;
 		}
 
 		&--author {
@@ -275,8 +289,7 @@
 	font-size: 3rem;
 	font-weight: 700;
 	text-align: center;
-	background-color: red;
-	height: 20%;
+	margin-bottom: 10rem;
 }
 
 .benefits__content {
@@ -284,15 +297,18 @@
 	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: center;
-	height: 80%;
+	margin-bottom: 12rem;
 
 	&--card {
 		display: flex;
+		max-width: 25rem;
 		flex-direction: column;
-		justify-content: space-around;
+		justify-content: start;
 		background-color: #fff;
-		height: 25rem;
-		width: 25rem;
+		border-radius: 1rem;
+		box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.2);
+		text-align: center;
+
 
 		&-iconbox {
 			position: relative;
@@ -311,17 +327,86 @@
 		}
 
 		&-header {
+			align-self: center;
 			font-size: 2rem;
 			color: var(--green-light);
-			margin: 0 0 0 1.5rem;
+			margin: 2rem 0 0 0;
 
 		}
 
 		&-text {
 			font-size: 1.6rem;
 			color: var(--main-text-color);
-			margin-left: 1.5rem;
+			margin: 2rem 1.5rem;
+		}
+	}
+}
+
+.footer {
+
+	&__card {
+		background-color: #fff;
+		height: 30rem;
+		width: 60rem;
+		margin: 0 auto;
+		transform: translateY(-50%);
+		border-radius: 1rem;
+		box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.2);
+
+		&--content {
+			display: flex;
+			flex-direction: column;
+			padding: 5rem;
+		}
+
+		&--header {
+			font-size: 3rem;
+			margin-bottom: .5rem;
+		}
+
+		&--text {
+			font-size: 1.7rem;
 			margin-bottom: 2rem;
+		}
+
+		&--form {
+			display: flex;
+			flex-direction: column;
+
+			.email-line {
+				margin-bottom: 2rem;
+			}
+
+			.subscribe-line {
+				display: flex;
+				align-items: center;
+			}
+
+			&-email {
+				height: 4rem;
+				width: 30rem;
+				background-color: var(--footer);
+				border: none;
+				font-size: 1.3rem;
+				outline: none;
+				padding: 0 1rem;
+				text-align: left;
+			}
+
+			&-submit {
+				background-color: var(--green-medium);
+				color: #fff;
+				border: none;
+				height: 4rem;
+				width: 14rem;
+				margin-left: 2rem;
+			}
+
+			&-text {
+				display: inline-block;
+				font-size: 1.2rem;
+				margin-left: .8rem;
+			}
 		}
 	}
 }
