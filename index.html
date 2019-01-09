@@ -30,27 +30,29 @@
                     Find your <span class="search-box__heading--green">flight</span> and start<br>the holiday
                 </h1>
                 <div class="search-box__search">
-                    <div class="search-box__search--to">
-                        Where to
+                    <div class="to-from-when">
+                        <div class="search-box__search--to">
+                            Where to
 
-                        <input type="text" name="Fly to" class="search-box__search--to-location" placeholder="Flying to">
-                    </div>
-                    <div class="search-box__search--from">
-                        From
+                            <input type="text" name="Fly to" class="search-box__search--to-location" placeholder="Flying to" required>
+                        </div>
+                        <div class="search-box__search--from">
+                            From
 
-                        <input type="text" name="Fly from" class="search-box__search--from-location" placeholder="Flying from">
-                    </div>
-                    <div class="search-box__search--when">
-                        When
+                            <input type="text" name="Fly from" class="search-box__search--from-location" placeholder="Flying from" required>
+                        </div>
+                        <div class="search-box__search--when">
+                            When
 
-                        <input type="date" name="Fly from" class="search-box__search--when-date" placeholder="Departure date">
+                            <input type="date" name="Fly from" class="search-box__search--when-date" placeholder="Departure date" required>
+                        </div>                       
                     </div>
-                    <!-- <div class="search-box__search--options">
-                        <select name="search-box__search--options-route">
+                    <div class="search-box__search--options">
+                        <select name="search-box__search--options-route" class="search-box__search--options-route">
                             <option value="one-way">One Way Trip</option>
                             <option value="round-trip">Round Trip</option>
                         </select>
-                        <select name="search-box__search--options-passengers">
+                        <select name="search-box__search--options-passengers" class="search-box__search--options-passengers">
                             <option value="1">1 passenger</option>
                             <option value="2">2 passenger</option>
                             <option value="3">3 passenger</option>
@@ -58,7 +60,7 @@
                             <option value="5">5 passenger</option>
                             <option value="6">6 passenger</option>
                         </select>
-                    </div> -->
+                    </div>
                 </div>
             </div>
             <div class="search-image">
@@ -152,6 +154,28 @@
                         <p>Tickets delivered right to your phone for scanning</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div class="footer__card">
+                <div class="footer__card--content">
+                    <h4 class="footer__card--header">Save time, save money!</h4>
+                    <p class="footer__card--text">Sign up and we'll send the best deals to you</p>
+                    <form action="#" class="footer__card--form">
+                        <div class="email-line">
+                            <input type="text" class="footer__card--form-email" placeholder="Your Email" required="">
+                            <button action="#" class="footer__card--form-submit">Subscribe</button>                        
+                        </div>
+                        <div class="subscribe-line">
+                            <input type="checkbox" class="footer__card--form-check">
+                            <p class="footer__card--form-text">Sign up and we'll send the best deals to you</p>                        
+                        </div>
+                    </form>                    
+                </div>
+            </div>
+            <div class="footer__content">
+                
             </div>
         </section>
 
