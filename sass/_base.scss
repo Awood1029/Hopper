@@ -9,6 +9,8 @@
 	--grey-light-2: #f4f2f2;
 	--grey-light-3: #f0eeee;
 	--grey-light-4: #ccc;
+
+	--footer: #F0F0F0;
 }
 
 * {
@@ -29,7 +31,7 @@ html {
 }
 
 body {
-	background-color: #F5F6F6;
+	background-color: var(--background-color);
 	font-family: "Open Sans", sans-serif;
 	font-weight: 400;
 	line-height: 1.6;
