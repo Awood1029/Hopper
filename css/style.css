@@ -7,7 +7,8 @@
   --grey-light-1: #faf9f9;
   --grey-light-2: #f4f2f2;
   --grey-light-3: #f0eeee;
-  --grey-light-4: #ccc; }
+  --grey-light-4: #ccc;
+  --footer: #F0F0F0; }
 
 * {
   margin: 0;
@@ -24,7 +25,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  background-color: #F5F6F6;
+  background-color: var(--background-color);
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 1.6;
@@ -81,7 +82,8 @@ body {
   .search-box__search {
     position: absolute;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: flex-start;
     top: 45%;
     right: 0;
     height: 50%;
@@ -89,48 +91,62 @@ body {
     background-color: #fff;
     border-radius: 1rem 0 0 1rem;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+    .search-box__search .to-from-when {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 2rem; }
     .search-box__search--to {
       display: flex;
       flex-direction: column;
-      padding-top: 1.5rem;
-      font-size: 1.3rem; }
+      font-size: 1.3rem;
+      margin-bottom: 2rem; }
       .search-box__search--to-location {
         font-family: inherit;
         font-size: inherit;
         color: inherit;
         background-color: var(--grey-light-2);
         border: none;
-        margin-top: 1.5rem;
         height: 3rem;
-        padding-left: 1rem; }
+        padding-left: 1rem;
+        margin-top: .6rem; }
     .search-box__search--from {
       display: flex;
       flex-direction: column;
-      padding-top: 1.5rem;
-      font-size: 1.3rem; }
+      font-size: 1.3rem;
+      margin-bottom: 2rem; }
       .search-box__search--from-location {
         font-family: inherit;
         font-size: inherit;
         color: inherit;
         background-color: var(--grey-light-2);
         border: none;
-        margin-top: 1.5rem;
         height: 3rem;
-        padding-left: 1rem; }
+        padding-left: 1rem;
+        margin-top: .6rem; }
     .search-box__search--when {
       display: flex;
       flex-direction: column;
-      padding-top: 1.5rem;
-      font-size: 1.3rem; }
+      font-size: 1.3rem;
+      margin-bottom: 2rem; }
       .search-box__search--when-date {
         font-family: inherit;
         font-size: inherit;
         color: inherit;
         background-color: var(--grey-light-2);
         border: none;
-        margin-top: 1.5rem;
         height: 3rem;
-        padding-left: 1rem; }
+        padding-left: 1rem;
+        margin-top: .6rem; }
+    .search-box__search--options {
+      display: flex;
+      justify-content: flex-start;
+      margin-left: 2.6rem;
+      height: 2rem; }
+      .search-box__search--options-route {
+        margin-right: 2rem;
+        border: none; }
+      .search-box__search--options-passengers {
+        border: none; }
 
 .search-image {
   position: relative;
@@ -157,7 +173,9 @@ body {
 .top-destination {
   height: 100%;
   width: 55%;
-  transform: translateY(-20%); }
+  transform: translateY(-10rem);
+  display: flex;
+  flex-direction: column; }
   .top-destination__heading {
     font-size: 2.5rem;
     font-weight: 700;
@@ -165,9 +183,10 @@ body {
     margin-bottom: 4rem;
     text-transform: uppercase; }
   .top-destination__card {
+    position: relative;
     background-color: #fff;
-    height: 65%;
-    width: 75%;
+    height: 37rem;
+    width: 45rem;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
     overflow: hidden;
@@ -210,6 +229,8 @@ body {
   color: var(--main-text-color); }
   .qoute__content {
     width: 75%; }
+    .qoute__content--text {
+      margin-bottom: 1.2rem; }
     .qoute__content--author--text {
       font-size: 1.6rem; }
 
@@ -217,22 +238,23 @@ body {
   font-size: 3rem;
   font-weight: 700;
   text-align: center;
-  background-color: red;
-  height: 20%; }
+  margin-bottom: 10rem; }
 
 .benefits__content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  height: 80%; }
+  margin-bottom: 12rem; }
   .benefits__content--card {
     display: flex;
+    max-width: 25rem;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: start;
     background-color: #fff;
-    height: 25rem;
-    width: 25rem; }
+    border-radius: 1rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+    text-align: center; }
     .benefits__content--card-iconbox {
       position: relative;
       width: 50%;
@@ -246,18 +268,66 @@ body {
         height: 3rem;
         width: 3rem; }
     .benefits__content--card-header {
+      align-self: center;
       font-size: 2rem;
       color: var(--green-light);
-      margin: 0 0 0 1.5rem; }
+      margin: 2rem 0 0 0; }
     .benefits__content--card-text {
       font-size: 1.6rem;
       color: var(--main-text-color);
-      margin-left: 1.5rem;
+      margin: 2rem 1.5rem; }
+
+.footer__card {
+  background-color: #fff;
+  height: 30rem;
+  width: 60rem;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  border-radius: 1rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+  .footer__card--content {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem; }
+  .footer__card--header {
+    font-size: 3rem;
+    margin-bottom: .5rem; }
+  .footer__card--text {
+    font-size: 1.7rem;
+    margin-bottom: 2rem; }
+  .footer__card--form {
+    display: flex;
+    flex-direction: column; }
+    .footer__card--form .email-line {
       margin-bottom: 2rem; }
+    .footer__card--form .subscribe-line {
+      display: flex;
+      align-items: center; }
+    .footer__card--form-email {
+      height: 4rem;
+      width: 30rem;
+      background-color: var(--footer);
+      border: none;
+      font-size: 1.3rem;
+      outline: none;
+      padding: 0 1rem;
+      text-align: left; }
+    .footer__card--form-submit {
+      background-color: var(--green-medium);
+      color: #fff;
+      border: none;
+      height: 4rem;
+      width: 14rem;
+      margin-left: 2rem; }
+    .footer__card--form-text {
+      display: inline-block;
+      font-size: 1.2rem;
+      margin-left: .8rem; }
 
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 1.5rem 8rem 0 8rem; }
 
 .section-search {
@@ -269,10 +339,14 @@ body {
 
 .section-info {
   display: flex;
-  margin: 0 0 0 8rem;
-  height: 60vh; }
+  align-items: center;
+  margin: 3rem 0 1rem 8rem; }
 
 .section-benefits {
   display: flex;
-  flex-direction: column;
-  height: 70vh; }
+  flex-direction: column; }
+
+.footer {
+  height: 40rem;
+  background-color: var(--footer);
+  margin-top: 25rem; }
